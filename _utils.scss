@@ -1,3 +1,5 @@
+// border radius helpers
+
 @mixin border-radius($radius) {
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
@@ -48,9 +50,15 @@
 	@include border-radius-br($radius);
 }
 
+// shadow helpers
+
 @mixin textshadow($alpha:0.4) {
 	text-shadow: 0px 1px 1px rgba(0,0,0,$alpha);
 }
+
+// TODO: box shadow mixin
+
+// miscellaneous
 
 @mixin selectioncolor($color) {
     ::-moz-selection { 
@@ -83,5 +91,3 @@
     display: none;
     visibility: hidden;
 }
-
-// TODO: box shadow mixin

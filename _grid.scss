@@ -1,3 +1,6 @@
+// grid system, originally based on 960.gs by Nathan Smith
+
+// change this variable to alter the gutter margins
 $gridmargin: 10px;
 
 @mixin c12 { 
@@ -80,24 +83,6 @@ $gridmargin: 10px;
 @mixin s9{padding-right:720px}
 @mixin s10{padding-right:800px}
 @mixin s11{padding-right:880px}
-
-// clearfix from Onehub
-//@mixin clearfix {
-//    display: block;
-//    &:after {
-//        content: ".";
-//        display: block;
-//        height: 0;
-//        float: none;
-//        font-size: 0;
-//        margin: 0;
-//        padding: 0;
-//        overflow: hidden;
-//        clear: both;
-//        visibility: hidden;
-//        line-height: 0;
-//    }
-//}
 
 // clearfix from HTML5 Boilerplate
 @mixin clearfix {
