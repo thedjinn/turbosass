@@ -1,0 +1,97 @@
+@mixin button {
+    background: #222 url(/images/button.png) repeat-x; 
+    display: inline-block; 
+    padding: 5px 10px 6px; 
+    color: #fff; 
+    text-decoration: none;
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 13px;
+
+    &:hover {
+        background-color: #111;
+        color: #fff;
+    }
+
+    &:active {
+        top: 1px;
+    }
+}
+
+@mixin smallbutton {
+    font-size: 11px;
+}
+
+@mixin largebutton {
+    font-size: 14px;
+    padding: 8px 14px 9px;
+}
+
+@mixin xlargebutton {
+    font-size: 24px;
+    padding: 8px 14px 9px;
+}
+
+@mixin xxlargebutton {
+    font-size: 72px;
+    padding: 8px 14px 9px;
+}
+
+@mixin pinkbutton {
+    background-color: #e22092;
+
+    &:hover {
+        background-color: #c81e82;
+    }
+}
+@mixin greenbutton {
+    background-color: #91bd09;
+
+    &:hover {
+        background-color: #749a02;
+    }
+}
+@mixin redbutton {
+    background-color: #e62727;
+
+    &:hover {
+        background-color: #cf2525;
+    }
+}
+@mixin orangebutton {
+    background-color: #ff5c00;
+
+    &:hover {
+        background-color: #d45500;
+    }
+}
+@mixin bluebutton {
+    background-color: #2981e4;
+
+    &:hover {
+        background-color: #2575cf;
+    }
+}
+@mixin yellowbutton {
+    background-color: #ffb515;
+
+    &:hover {
+        background-color: #fc9200;
+    }
+}
+@mixin greybutton {
+    background-color: #aaaaaa;
+
+    &:hover {
+        background-color: #999999;
+    }
+}
