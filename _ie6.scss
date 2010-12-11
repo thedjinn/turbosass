@@ -1,3 +1,8 @@
+// Trigger the hasLayout property on IE6
+@mixin haslayout {
+	zoom: 1;
+}
+
 // Hacks to implement min-height and min-width in IE6
 // http://www.dustindiaz.com/min-height-fast-hack/
 @mixin minheight($height) {

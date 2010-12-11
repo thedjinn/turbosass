@@ -31,32 +31,100 @@
 }
 
 @mixin border-radius-left($radius) {
-	@include border-radius-tl($radius);
-	@include border-radius-bl($radius);
+    @include border-radius-tl($radius);
+    @include border-radius-bl($radius);
 }
 
 @mixin border-radius-right($radius) {
-	@include border-radius-tr($radius);
-	@include border-radius-br($radius);
+    @include border-radius-tr($radius);
+    @include border-radius-br($radius);
 }
 
 @mixin border-radius-top($radius) {
-	@include border-radius-tl($radius);
-	@include border-radius-tr($radius);
+    @include border-radius-tl($radius);
+    @include border-radius-tr($radius);
 }
 
 @mixin border-radius-bottom($radius) {
-	@include border-radius-bl($radius);
-	@include border-radius-br($radius);
+    @include border-radius-bl($radius);
+    @include border-radius-br($radius);
 }
 
 // shadow helpers
 
 @mixin textshadow($alpha:0.4) {
-	text-shadow: 0px 1px 1px rgba(0,0,0,$alpha);
+    text-shadow: 0px 1px 1px rgba(0,0,0,$alpha);
 }
 
-// TODO: box shadow mixin
+@mixin textemboss($alpha:0.4) {
+    text-shadow: rgba(255,255,255,$alpha) 0px 1px 1px;
+}
+
+@mixin textemboss2($alpha:0.4) {
+    text-shadow: rgba(255,255,255,$alpha) 0px 1px 1px, rgba(0,0,0,$alpha) 0px -1px -1px;
+}
+
+// box shadow
+
+@mixin box-shadow($shadow) {
+    -moz-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// box size model
+
+@mixin box-sizing($sizing) {
+    -mz-box-sizing: $sizing;
+    -moz-box-sizing: $sizing;
+    -webkit-box-sizing: $sizing;
+    box-sizing: $sizing;
+}
+
+// gradients
+
+@mixin vertical-gradient($top,$bottom) {
+    background-color: $top;
+    background-image: -moz-linear-gradient(top,$top,$bottom);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,$top),color-stop(1,$bottom));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$top}',endColorStr='#{$bottom}');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$top}',endColorStr='#{$bottom}')";
+}
+
+@mixin horizontal-gradient($left,$right) {
+    background-color: $left;
+    background-image: -moz-linear-gradient(left,$left,$right);
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(0,$left),color-stop(1,$right));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$top}',endColorStr='#{$bottom}',gradientType=1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$top}',endColorStr='#{$bottom}',gradientType=1)";
+}
+
+// sticky footer
+
+// must be toplevel mixin
+// $root is a global content wrapper excluding $footer, $rootfooter is an empty div at the bottom of $root, $footer is the actual footer
+@mixin sticky-footer($height,$root,$rootfooter,$footer) {
+    html,body {
+        height: 100%;
+    }
+
+    #{$root} {
+        @include minheight(100%);
+        clear: both;
+        margin-bottom: -#{$height};
+
+        #{$rootfooter} {
+            clear: both;
+            height: #{$height};
+        }
+    }
+
+    #{$footer} {
+        clear: both;
+        position: relative;
+        height: #{$height};
+    }
+}
 
 // miscellaneous
 
@@ -90,4 +158,11 @@
 @mixin hidden {
     display: none;
     visibility: hidden;
+}
+
+@mixin prewrapping {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    word-wrap: break-word;
 }
