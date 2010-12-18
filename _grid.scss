@@ -1,12 +1,13 @@
 // grid system, originally based on 960.gs by Nathan Smith
 
 // change this variable to alter the gutter margins
+$gridwidth: 80px;
 $gridmargin: 10px;
 
 @mixin c12 { 
     margin-left:auto;
     margin-right:auto;
-    width:960px; 
+    width:12*$gridwidth; 
 }
 
 @mixin gridbox {
@@ -23,66 +24,66 @@ $gridmargin: 10px;
 @mixin alpha { margin-left:0 }
 @mixin omega { margin-right: 0 }
 
-@mixin g1 { @include gridbox; width:80px-(2*$gridmargin); }
-@mixin g2 { @include gridbox; width:160px-(2*$gridmargin); }
-@mixin g3 { @include gridbox; width:240px-(2*$gridmargin); }
-@mixin g4 { @include gridbox; width:320px-(2*$gridmargin); }
-@mixin g5 { @include gridbox; width:400px-(2*$gridmargin); }
-@mixin g6 { @include gridbox; width:480px-(2*$gridmargin); }
-@mixin g7 { @include gridbox; width:560px-(2*$gridmargin); }
-@mixin g8 { @include gridbox; width:640px-(2*$gridmargin); }
-@mixin g9 { @include gridbox; width:720px-(2*$gridmargin); }
-@mixin g10 { @include gridbox; width:800px-(2*$gridmargin); }
-@mixin g11 { @include gridbox; width:880px-(2*$gridmargin); }
-@mixin g12 { @include gridbox; width:960px-(2*$gridmargin); }
+@mixin g1 { @include gridbox; width:$gridwidth-(2*$gridmargin); }
+@mixin g2 { @include gridbox; width:(2*$gridwidth)-(2*$gridmargin); }
+@mixin g3 { @include gridbox; width:(3*$gridwidth)-(2*$gridmargin); }
+@mixin g4 { @include gridbox; width:(4*$gridwidth)-(2*$gridmargin); }
+@mixin g5 { @include gridbox; width:(5*$gridwidth)-(2*$gridmargin); }
+@mixin g6 { @include gridbox; width:(6*$gridwidth)-(2*$gridmargin); }
+@mixin g7 { @include gridbox; width:(7*$gridwidth)-(2*$gridmargin); }
+@mixin g8 { @include gridbox; width:(8*$gridwidth)-(2*$gridmargin); }
+@mixin g9 { @include gridbox; width:(9*$gridwidth)-(2*$gridmargin); }
+@mixin g10 { @include gridbox; width:(10*$gridwidth)-(2*$gridmargin); }
+@mixin g11 { @include gridbox; width:(11*$gridwidth)-(2*$gridmargin); }
+@mixin g12 { @include gridbox; width:(12*$gridwidth)-(2*$gridmargin); }
 
-@mixin push1 { @include pushpull; left:80px }
-@mixin push2 { @include pushpull; left:160px }
-@mixin push3 { @include pushpull; left:240px }
-@mixin push4 { @include pushpull; left:320px }
-@mixin push5 { @include pushpull; left:400px }
-@mixin push6 { @include pushpull; left:480px }
-@mixin push7 { @include pushpull; left:560px }
-@mixin push8 { @include pushpull; left:640px }
-@mixin push9 { @include pushpull; left:720px }
-@mixin push10 { @include pushpull; left:800px }
-@mixin push11 { @include pushpull; left:880px }
+@mixin push1 { @include pushpull; left:$gridwidth }
+@mixin push2 { @include pushpull; left:2*$gridwidth }
+@mixin push3 { @include pushpull; left:3*$gridwidth }
+@mixin push4 { @include pushpull; left:4*$gridwidth }
+@mixin push5 { @include pushpull; left:5*$gridwidth }
+@mixin push6 { @include pushpull; left:6*$gridwidth }
+@mixin push7 { @include pushpull; left:7*$gridwidth }
+@mixin push8 { @include pushpull; left:8*$gridwidth }
+@mixin push9 { @include pushpull; left:9*$gridwidth }
+@mixin push10 { @include pushpull; left:10*$gridwidth }
+@mixin push11 { @include pushpull; left:11*$gridwidth }
 
-@mixin pull1 { @include pushpull; left:-80px }
-@mixin pull2 { @include pushpull; left:-160px }
-@mixin pull3 { @include pushpull; left:-240px }
-@mixin pull4 { @include pushpull; left:-320px }
-@mixin pull5 { @include pushpull; left:-400px }
-@mixin pull6 { @include pushpull; left:-480px }
-@mixin pull7 { @include pushpull; left:-560px }
-@mixin pull8 { @include pushpull; left:-640px }
-@mixin pull9 { @include pushpull; left:-720px }
-@mixin pull10 { @include pushpull; left:-800px }
-@mixin pull11 { @include pushpull; left:-880px }
+@mixin pull1 { @include pushpull; left:-$gridwidth }
+@mixin pull2 { @include pushpull; left:-2*$gridwidth }
+@mixin pull3 { @include pushpull; left:-3*$gridwidth }
+@mixin pull4 { @include pushpull; left:-4*$gridwidth }
+@mixin pull5 { @include pushpull; left:-5*$gridwidth }
+@mixin pull6 { @include pushpull; left:-6*$gridwidth }
+@mixin pull7 { @include pushpull; left:-7*$gridwidth }
+@mixin pull8 { @include pushpull; left:-8*$gridwidth }
+@mixin pull9 { @include pushpull; left:-9*$gridwidth }
+@mixin pull10 { @include pushpull; left:-10*$gridwidth }
+@mixin pull11 { @include pushpull; left:-11*$gridwidth }
 
-@mixin p1{padding-left:80px}
-@mixin p2{padding-left:160px}
-@mixin p3{padding-left:240px}
-@mixin p4{padding-left:320px}
-@mixin p5{padding-left:400px}
-@mixin p6{padding-left:480px}
-@mixin p7{padding-left:560px}
-@mixin p8{padding-left:640px}
-@mixin p9{padding-left:720px}
-@mixin p10{padding-left:800px}
-@mixin p11{padding-left:880px}
+@mixin p1{padding-left:$gridwidth }
+@mixin p2{padding-left:2*$gridwidth }
+@mixin p3{padding-left:3*$gridwidth }
+@mixin p4{padding-left:4*$gridwidth }
+@mixin p5{padding-left:5*$gridwidth }
+@mixin p6{padding-left:6*$gridwidth }
+@mixin p7{padding-left:7*$gridwidth }
+@mixin p8{padding-left:8*$gridwidth }
+@mixin p9{padding-left:9*$gridwidth }
+@mixin p10{padding-left:10*$gridwidth }
+@mixin p11{padding-left:11*$gridwidth }
 
-@mixin s1{padding-right:80px}
-@mixin s2{padding-right:160px}
-@mixin s3{padding-right:240px}
-@mixin s4{padding-right:320px}
-@mixin s5{padding-right:400px}
-@mixin s6{padding-right:480px}
-@mixin s7{padding-right:560px}
-@mixin s8{padding-right:640px}
-@mixin s9{padding-right:720px}
-@mixin s10{padding-right:800px}
-@mixin s11{padding-right:880px}
+@mixin s1{padding-right:$gridwidth }
+@mixin s2{padding-right:2*$gridwidth }
+@mixin s3{padding-right:3*$gridwidth }
+@mixin s4{padding-right:4*$gridwidth }
+@mixin s5{padding-right:5*$gridwidth }
+@mixin s6{padding-right:6*$gridwidth }
+@mixin s7{padding-right:7*$gridwidth }
+@mixin s8{padding-right:8*$gridwidth }
+@mixin s9{padding-right:9*$gridwidth }
+@mixin s10{padding-right:10*$gridwidth }
+@mixin s11{padding-right:11*$gridwidth }
 
 // clearfix from HTML5 Boilerplate
 @mixin clearfix {
