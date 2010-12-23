@@ -124,7 +124,7 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		-webkit-transition: left .25s ease;
+		-webkit-transition: left .25s ease-out;
 	}
 
 	input[type=checkbox] {
