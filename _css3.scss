@@ -89,6 +89,15 @@
 	transition: $trans;
 }
 
+// transform wrapper
+
+@mixin transform($trans) {
+	-webkit-transform: $trans;
+	-moz-transform: $trans;
+	-o-transform: $trans;
+	transform: $trans;
+}
+
 // box-sizing wrapper
 
 @mixin box-sizing($sizing) {
