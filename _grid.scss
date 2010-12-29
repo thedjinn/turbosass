@@ -26,7 +26,7 @@ $gridmargin: 10px;
 @mixin alpha { margin-left:0 }
 @mixin omega { margin-right: 0 }
 
-@mixin g1 { @include gridbox; width:$gridwidth-(2*$gridmargin); }
+@mixin g1 { @include gridbox; width:($gridwidth)-(2*$gridmargin); }
 @mixin g2 { @include gridbox; width:(2*$gridwidth)-(2*$gridmargin); }
 @mixin g3 { @include gridbox; width:(3*$gridwidth)-(2*$gridmargin); }
 @mixin g4 { @include gridbox; width:(4*$gridwidth)-(2*$gridmargin); }
