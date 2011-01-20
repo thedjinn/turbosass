@@ -1,0 +1,15 @@
+// Default font path without trailing slash, override at will
+$fontpath: "/fonts";
+
+// Web font wrapper
+// $family is the font name, $filename is the font filename minus extension
+// Include this in the top level
+@mixin webfont($family, $filename) {
+	@font-face {
+		font-family: '#{$family}';
+		src: url('#{$fontpath}/#{$filename}.eot');
+		src: local('☺'), url('#{$fontpath}/#{$filename}.woff') format('woff'), url('#{$fontpath}/#{$filename}.ttf') format('truetype'), url('#{$fontpath}/#{$filename}.svg#webfont') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
