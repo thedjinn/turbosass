@@ -121,9 +121,8 @@
 // box-sizing wrapper
 
 @mixin box-sizing($sizing) {
-    -mz-box-sizing: $sizing;
-    -moz-box-sizing: $sizing;
     -webkit-box-sizing: $sizing;
+    -moz-box-sizing: $sizing;
     box-sizing: $sizing;
 }
 
