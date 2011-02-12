@@ -103,43 +103,43 @@
 //     <span class="check"></span>
 //   </label>
 @mixin iphonecheckbox($width:80px,$height:32px) {
-	@include border-radius(4px);
-	display: inline-block;
-	background: -moz-linear-gradient(19% 75% 90deg,#3095C7, #14539C);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#14539C), to(#3095C7));
-	border: 1px solid #555555;
-	width: $width;
-	position: relative;
-	height: $height;
-	cursor: pointer;
+    @include border-radius(4px);
+    display: inline-block;
+    background: -moz-linear-gradient(19% 75% 90deg,#3095C7, #14539C);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#14539C), to(#3095C7));
+    border: 1px solid #555555;
+    width: $width;
+    position: relative;
+    height: $height;
+    cursor: pointer;
 
-	.check {
-		@include border-radius(3px);
-		display: block;
-		width: $width / 2;
-		height: $height - 2;
-		background: -moz-linear-gradient(19% 75% 90deg,#FFFFFF, #A1A1A1);
-		background: #fff -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A1A1A1), to(#FFFFFF));
-		border: 1px solid #e5e5e5;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		-webkit-transition: left .25s ease-out;
-	}
+    .check {
+        @include border-radius(3px);
+        display: block;
+        width: $width / 2;
+        height: $height - 2;
+        background: -moz-linear-gradient(19% 75% 90deg,#FFFFFF, #A1A1A1);
+        background: #fff -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A1A1A1), to(#FFFFFF));
+        border: 1px solid #e5e5e5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        -webkit-transition: left .25s ease-out;
+    }
 
-	input[type=checkbox] {
-		display: none;
+    input[type=checkbox] {
+        display: none;
 
-		&:checked + .check {
-			top: 0px;
-			left: ($width / 2 ) - 2;
-			@include box-shadow(#244766 -1px 0px 3px);
-		}
+        &:checked + .check {
+            top: 0px;
+            left: ($width / 2 ) - 2;
+            @include box-shadow(#244766 -1px 0px 3px);
+        }
 
-		& + .check {
-			top: 0px;
-			left: 0px;
-			@include box-shadow(#244766 1px 0px 3px);
-		}
-	}
+        & + .check {
+            top: 0px;
+            left: 0px;
+            @include box-shadow(#244766 1px 0px 3px);
+        }
+    }
 }

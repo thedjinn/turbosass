@@ -1,31 +1,31 @@
 // Trigger the hasLayout property on IE6
 @mixin haslayout {
-	zoom: 1;
+    zoom: 1;
 }
 
 // Hacks to implement min-height and min-width in IE6
 // http://www.dustindiaz.com/min-height-fast-hack/
 @mixin minheight($height) {
-	min-height: $height;
-	height: auto !important;
-	height: $height;
+    min-height: $height;
+    height: auto !important;
+    height: $height;
 }
 
 @mixin minwidth($width) {
-	min-width: $width;
-	width: auto !important;
-	width: $width;
+    min-width: $width;
+    width: auto !important;
+    width: $width;
 }
 
 // Fix for IE6 double float margin bug.
 // http://www.positioniseverything.net/explorer/doubled-margin.html
 @mixin doublefloatmarginfix {
-	display: inline;
-	float: left;
+    display: inline;
+    float: left;
 }
 
 // Fix for IE6 peekaboo bug.
 // http://www.positioniseverything.net/explorer/peekaboo.html
 @mixin peekaboofix {
-	_display: inline-block;
+    _display: inline-block;
 }

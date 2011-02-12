@@ -1,33 +1,33 @@
 // border-radius wrappers
 
 @mixin border-radius($radius) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin border-radius-tl($radius) {
-  -moz-border-radius-topleft: $radius;
-  -webkit-border-top-left-radius: $radius;
-  border-top-left-radius: $radius;
+    -moz-border-radius-topleft: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
 }
 
 @mixin border-radius-tr($radius) {
-  -moz-border-radius-topright: $radius;
-  -webkit-border-top-right-radius: $radius;
-  border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
 }
 
 @mixin border-radius-bl($radius) {
-  -moz-border-radius-bottomleft: $radius;
-  -webkit-border-bottom-left-radius: $radius;
-  border-bottom-left-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
 }
 
 @mixin border-radius-br($radius) {
-  -moz-border-radius-bottomright: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
 }
 
 @mixin border-radius-left($radius) {
@@ -75,28 +75,28 @@
 // opacity wrapper
 
 @mixin opacity($alpha) {
-	opacity: $alpha;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha*100})"; // for IE8
-	filter: alpha(opacity=#{$alpha*100}); // for IE5-7
+    opacity: $alpha;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha*100})"; // for IE8
+    filter: alpha(opacity=#{$alpha*100}); // for IE5-7
 }
 
 // transition wrapper
 
 @mixin transition($trans) {
-	-webkit-transition: $trans;
-	-moz-transition: $trans;
-	-o-transition: $trans;
-	transition: $trans;
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -o-transition: $trans;
+    transition: $trans;
 }
 
 // transform wrapper
 
 @mixin transform($trans) {
-	-webkit-transform: $trans;
-	-moz-transform: $trans;
+    -webkit-transform: $trans;
+    -moz-transform: $trans;
     -ms-transform: $trans;
-	-o-transform: $trans;
-	transform: $trans;
+    -o-transform: $trans;
+    transform: $trans;
 }
 
 // transition on transform wrapper
