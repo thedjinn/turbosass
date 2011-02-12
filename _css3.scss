@@ -98,6 +98,15 @@
 	transform: $trans;
 }
 
+// transition on transform wrapper
+
+@mixin transtrans($trans) {
+    -webkit-transition: $trans -webkit-transform;
+    -moz-transition: $trans -moz-transform;
+    -o-transition: $trans -o-transform;
+    transition: $trans transform;
+}
+
 // box-sizing wrapper
 
 @mixin box-sizing($sizing) {
