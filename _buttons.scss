@@ -1,13 +1,11 @@
 @mixin button {
+    @include border-radius(6px);
+    @include box-shadow(0px 1px 3px rgba(0,0,0,0.6));
     background: #222 url(/images/button.png) repeat-x; 
     display: inline-block; 
     padding: 5px 10px 6px; 
     color: #fff; 
     text-decoration: none;
-    -moz-border-radius: 6px; 
-    -webkit-border-radius: 6px;
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
     text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
     border: none;
     border-bottom: 1px solid rgba(0,0,0,0.25);
@@ -115,6 +113,7 @@
 
     .check {
         @include border-radius(3px);
+        @include transition(left .25s ease-out);
         display: block;
         width: $width / 2;
         height: $height - 2;
@@ -124,22 +123,21 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        -webkit-transition: left .25s ease-out;
     }
 
     input[type=checkbox] {
         display: none;
 
         &:checked + .check {
+            @include box-shadow(#244766 -1px 0px 3px);
             top: 0px;
             left: ($width / 2 ) - 2;
-            @include box-shadow(#244766 -1px 0px 3px);
         }
 
         & + .check {
+            @include box-shadow(#244766 1px 0px 3px);
             top: 0px;
             left: 0px;
-            @include box-shadow(#244766 1px 0px 3px);
         }
     }
 }
