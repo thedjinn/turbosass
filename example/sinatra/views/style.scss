@@ -1,0 +1,6 @@
+@import "all";
+
+h1 {
+    @include border-radius(20px);
+    background: green;
+}
