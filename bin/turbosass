@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
-# The command line Sass parser.
 
-require 'haml' #File.dirname(__FILE__) + '/../lib/haml'
+require 'haml'
 require 'haml/exec'
 require 'turbosass'
+
+ARGV << "-I"
+ARGV << TurboSass.path
 
 opts = Haml::Exec::Sass.new(ARGV)
 opts.parse!
