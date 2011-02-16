@@ -7,6 +7,12 @@ module TurboSass
   end
 end
 
-# Inject the TurboSass SCSS path
-Sass::Plugin.options[:load_paths] ||= []
-Sass::Plugin.options[:load_paths] << TurboSass.path
+module Sass
+  class Engine
+    new_default_options = DEFAULT_OPTIONS.clone
+    new_default_options[:load_paths] << ::TurboSass.path
+
+    remove_const(:DEFAULT_OPTIONS)
+    DEFAULT_OPTIONS = new_default_options.freeze
+  end
+end
