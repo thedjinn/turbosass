@@ -1,89 +1,97 @@
 // This is the reset css from html5boilerplate.com
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
+// You can prevent the reset CSS from being applied by setting 
+// `$use_reset` to false before importing the TurboSass SCSS.
+$use_reset: true !default;
 
-body {
-    line-height: 1;
-}
+@if $use_reset == true {
 
-:focus {
-    outline: 1;
-}
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
 
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-    display: block;
-}
+    body {
+        line-height: 1;
+    }
 
-nav ul {
-    list-style: none;
-}
+    :focus {
+        outline: 1;
+    }
 
-blockquote, q {
-    quotes: none;
-}
+    article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+        display: block;
+    }
 
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
+    nav ul {
+        list-style: none;
+    }
 
-a {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
+    blockquote, q {
+        quotes: none;
+    }
 
-ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none;
-}
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: '';
+        content: none;
+    }
 
-mark {
-    background-color: #ff9;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
-}
+    a {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
 
-del {
-    text-decoration: line-through;
-}
+    ins {
+        background-color: #ff9;
+        color: #000;
+        text-decoration: none;
+    }
 
-abbr[title], dfn[title] {
-    border-bottom: 1px dotted #000;
-    cursor: help;
-}
+    mark {
+        background-color: #ff9;
+        color: #000;
+        font-style: italic;
+        font-weight: bold;
+    }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+    del {
+        text-decoration: line-through;
+    }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
-    padding: 0;
-}
+    abbr[title], dfn[title] {
+        border-bottom: 1px dotted #000;
+        cursor: help;
+    }
 
-input, select {
-    vertical-align: middle;
-}
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
 
-html {
-    overflow-y: scroll;
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #cccccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    input, select {
+        vertical-align: middle;
+    }
+
+    html {
+        overflow-y: scroll;
+    }
+
 }
