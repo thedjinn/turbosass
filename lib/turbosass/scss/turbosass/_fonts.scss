@@ -1,9 +1,14 @@
 // Default font path without trailing slash, override at will
 $fontpath: "/fonts";
 
-// Web font wrapper
-// $family is the font name, $filename is the font filename minus extension
-// Include this in the top level
+// ## Web font wrapper
+// 
+// $family is the font name, $filename is the font filename minus extension.
+// Include this in the top level.
+//
+// Example: 
+// 
+//     @mixin webfont("MuseoSans", "museosans");
 @mixin webfont($family, $filename) {
     @font-face {
         font-family: '#{$family}';
