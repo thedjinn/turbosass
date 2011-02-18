@@ -1,7 +1,7 @@
 // grid system, originally based on 960.gs by Nathan Smith
 
 // change this variable to alter the container width and the amount of grid columns
-$gridwidth: 960px / 12;
+$gridwidth: 960px / 12 !default;
 
 // change this variable to alter the gutter margins
 $gridmargin: 10px;
