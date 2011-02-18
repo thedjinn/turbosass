@@ -1,87 +1,94 @@
 // border-radius wrappers
 
+// Apply a border radius on all corners
 @mixin border-radius($radius) {
     -moz-border-radius: $radius;
     -webkit-border-radius: $radius;
     border-radius: $radius;
 }
 
+// Apply a border radius on the top-left corner
 @mixin border-radius-tl($radius) {
     -moz-border-radius-topleft: $radius;
     -webkit-border-top-left-radius: $radius;
     border-top-left-radius: $radius;
 }
 
+// Apply a border radius on the top-right corner
 @mixin border-radius-tr($radius) {
     -moz-border-radius-topright: $radius;
     -webkit-border-top-right-radius: $radius;
     border-top-right-radius: $radius;
 }
 
+// Apply a border radius on the bottom-left corner
 @mixin border-radius-bl($radius) {
     -moz-border-radius-bottomleft: $radius;
     -webkit-border-bottom-left-radius: $radius;
     border-bottom-left-radius: $radius;
 }
 
+// Apply a border radius on the bottom-right corner
 @mixin border-radius-br($radius) {
     -moz-border-radius-bottomright: $radius;
     -webkit-border-bottom-right-radius: $radius;
     border-bottom-right-radius: $radius;
 }
 
+// Apply a border radius on the left corners
 @mixin border-radius-left($radius) {
     @include border-radius-tl($radius);
     @include border-radius-bl($radius);
 }
 
+// Apply a border radius on the right corners
 @mixin border-radius-right($radius) {
     @include border-radius-tr($radius);
     @include border-radius-br($radius);
 }
 
+// Apply a border radius on the top corners
 @mixin border-radius-top($radius) {
     @include border-radius-tl($radius);
     @include border-radius-tr($radius);
 }
 
+// Apply a border radius on the bottom corners
 @mixin border-radius-bottom($radius) {
     @include border-radius-bl($radius);
     @include border-radius-br($radius);
 }
 
-// text-shadow wrappers
-
+// Apply a one pixel offset black text shadow with a given alpha value
 @mixin textshadow($alpha:0.4) {
     text-shadow: 0px 1px 1px rgba(0,0,0,$alpha);
 }
 
+// Apply a one pixel offset white emboss effect with a given alpha value
 @mixin textemboss($alpha:0.4) {
     text-shadow: rgba(255,255,255,$alpha) 0px 1px 1px;
 }
 
+// Apply a one pixel offset inset emboss effect with a given alpha value
 @mixin textemboss2($alpha:0.4) {
     text-shadow: rgba(255,255,255,$alpha) 0px 1px 1px, rgba(0,0,0,$alpha) 0px -1px -1px;
 }
 
-// box-shadow wrapper
-
+// Apply a single box shadow
 @mixin box-shadow($shadow) {
     -moz-box-shadow: $shadow;
     -webkit-box-shadow: $shadow;
     box-shadow: $shadow;
 }
 
-// opacity wrapper
-
+// Set the opacity to a given value
 @mixin opacity($alpha) {
     opacity: $alpha;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha*100})"; // for IE8
     filter: alpha(opacity=#{$alpha*100}); // for IE5-7
 }
 
-// transition wrapper
-
+// Apply a transition property
 @mixin transition($trans) {
     -webkit-transition: $trans;
     -moz-transition: $trans;
@@ -89,8 +96,7 @@
     transition: $trans;
 }
 
-// transform wrapper
-
+// Apply a transform property
 @mixin transform($trans) {
     -webkit-transform: $trans;
     -moz-transform: $trans;
@@ -99,8 +105,7 @@
     transform: $trans;
 }
 
-// transition on transform wrapper
-
+// Apply a transition on the transform property
 @mixin transtrans($trans) {
     -webkit-transition: $trans -webkit-transform;
     -moz-transition: $trans -moz-transform;
@@ -108,8 +113,7 @@
     transition: $trans transform;
 }
 
-// transform-origin wrapper
-
+// Transform-origin wrapper
 @mixin transform-origin($origin) {
     -webkit-transform-origin: $origin;
     -moz-transform-origin: $origin;
@@ -118,16 +122,14 @@
     transform-origin: $origin;
 }
 
-// box-sizing wrapper
-
+// Box-sizing wrapper
 @mixin box-sizing($sizing) {
     -webkit-box-sizing: $sizing;
     -moz-box-sizing: $sizing;
     box-sizing: $sizing;
 }
 
-// gradient wrappers
-
+// Apply a vertical gradient with two colors
 @mixin vertical-gradient($top,$bottom) {
     background-color: $top;
     background-image: -moz-linear-gradient(top,$top,$bottom);
@@ -136,6 +138,7 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$top}',endColorStr='#{$bottom}')";
 }
 
+// Apply a horizontal gradient with two colors
 @mixin horizontal-gradient($left,$right) {
     background-color: $left;
     background-image: -moz-linear-gradient(left,$left,$right);
