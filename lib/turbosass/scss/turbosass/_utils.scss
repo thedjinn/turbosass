@@ -1,7 +1,22 @@
-// sticky footer
-
-// must be toplevel mixin
-// $root is a global content wrapper excluding $footer, $rootfooter is an empty div at the bottom of $root, $footer is the actual footer
+// ## Sticky Footer
+//
+// This must be a top-level mixin.
+//
+// Usage:
+//
+//     <body>
+//       <div id="root">
+//         Your content here.
+//         <div id="rootfooter"></div>
+//       </div>
+//       <div id="footer">
+//         This is the footer.
+//       </div>
+//     </body>
+//
+// And then in the SCSS:
+//
+//     @include sticky-footer(100px, "#root", "#rootfooter", "#footer");
 @mixin sticky-footer($height,$root,$rootfooter,$footer) {
     html,body {
         height: 100%;
@@ -25,8 +40,9 @@
     }
 }
 
-// miscellaneous
-
+// Change the color of the text selection.
+//
+// If you want to be cool you should use hot pink here.
 @mixin selectioncolor($color) {
     ::-moz-selection { 
         background: $color; 
@@ -45,6 +61,8 @@
     }
 }
 
+// Perform an image replacement technique by hiding the text in favor of
+// the background image url.
 @mixin imagereplacement {
     display: block; 
     text-indent: -999em; 
@@ -54,11 +72,13 @@
     direction: ltr;
 }
 
+// Apply this mixin to hide something, even from screen readers.
 @mixin hidden {
     display: none;
     visibility: hidden;
 }
 
+// Apply pre-style wrapping.
 @mixin prewrapping {
     white-space: pre;
     white-space: pre-wrap;
