@@ -1,3 +1,15 @@
+// ## Fancy button
+// 
+// Usage: 
+//
+//     <button>Click me</button>
+// 
+// And then in your SCSS file:
+//
+//     button {
+//       @include button;
+//       // insert any optional button helper mixins here
+//     }
 @mixin button {
     @include border-radius(6px);
     @include box-shadow(0px 1px 3px rgba(0,0,0,0.6));
@@ -25,25 +37,30 @@
     }
 }
 
+// Make the button smaller
 @mixin smallbutton {
     font-size: 11px;
 }
 
+// Make the button larger
 @mixin largebutton {
     font-size: 14px;
     padding: 8px 14px 9px;
 }
 
+// Make the button even larger
 @mixin xlargebutton {
     font-size: 24px;
     padding: 8px 14px 9px;
 }
 
+// Make the button huge
 @mixin xxlargebutton {
     font-size: 72px;
     padding: 8px 14px 9px;
 }
 
+// Give the button a pink color scheme
 @mixin pinkbutton {
     background-color: #e22092;
 
@@ -51,6 +68,8 @@
         background-color: #c81e82;
     }
 }
+
+// Give the button a green color scheme
 @mixin greenbutton {
     background-color: #91bd09;
 
@@ -58,6 +77,8 @@
         background-color: #749a02;
     }
 }
+
+// Give the button a red color scheme
 @mixin redbutton {
     background-color: #e62727;
 
@@ -65,6 +86,8 @@
         background-color: #cf2525;
     }
 }
+
+// Give the button an orange color scheme
 @mixin orangebutton {
     background-color: #ff5c00;
 
@@ -72,6 +95,8 @@
         background-color: #d45500;
     }
 }
+
+// Give the button a blue color scheme
 @mixin bluebutton {
     background-color: #2981e4;
 
@@ -79,6 +104,8 @@
         background-color: #2575cf;
     }
 }
+
+// Give the button a yellow color scheme
 @mixin yellowbutton {
     background-color: #ffb515;
 
@@ -86,6 +113,8 @@
         background-color: #fc9200;
     }
 }
+
+// Give the button a grey color scheme
 @mixin greybutton {
     background-color: #aaaaaa;
 
@@ -94,12 +123,20 @@
     }
 }
 
-// iOS style switch
+// ## iOS style checkbox/switch
+// 
 // Usage: 
-//   <label with mixin applied>
-//     <input type="checkbox"/>
-//     <span class="check"></span>
-//   </label>
+//
+//     <label>
+//       <input type="checkbox"/>
+//       <span class="check"></span>
+//     </label>
+// 
+// And then in your SCSS file:
+//
+//     label {
+//       @include iphonecheckbox;
+//     }
 @mixin iphonecheckbox($width:80px,$height:32px) {
     @include border-radius(4px);
     display: inline-block;
