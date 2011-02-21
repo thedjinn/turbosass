@@ -1,17 +1,23 @@
-// grid system, originally based on 960.gs by Nathan Smith
+// ## Grid System
+//
+// The TurboSass grid system is loosely based on Nathan Smith's fantastic
+// 960.gs system.
 
-// change this variable to alter the container width and the amount of grid columns
+// Change this variable to alter the container width and the amount of 
+// grid columns
 $gridwidth: 960px / 12 !default;
 
-// change this variable to alter the gutter margins
-$gridmargin: 10px;
+// Change this variable to alter the gutter margins.
+$gridmargin: 10px !default;
 
+// Make this object a container for grid columns
 @mixin c12 { 
     margin-left: auto;
     margin-right: auto;
     width: 12*$gridwidth; 
 }
 
+// Internal helper with grid column properties
 @mixin gridbox {
     display: inline;
     float: left;
@@ -19,13 +25,18 @@ $gridmargin: 10px;
     margin-right: $gridmargin;
 }
 
+// Internal helper with push-pull properties
 @mixin pushpull {
     position: relative;
 }
 
+// To nest grid cells in other grid cells apply the alpha mixin to the
+// left inner cell and omega to the right inner cell. This prevents
+// double gutters from appearing.
 @mixin alpha { margin-left:0; }
 @mixin omega { margin-right: 0; }
 
+// Grid cell mixins. The number indicates the width of the cell in columns.
 @mixin g1 { @include gridbox; width: ($gridwidth)-(2*$gridmargin); }
 @mixin g2 { @include gridbox; width: (2*$gridwidth)-(2*$gridmargin); }
 @mixin g3 { @include gridbox; width: (3*$gridwidth)-(2*$gridmargin); }
@@ -39,6 +50,7 @@ $gridmargin: 10px;
 @mixin g11 { @include gridbox; width: (11*$gridwidth)-(2*$gridmargin); }
 @mixin g12 { @include gridbox; width: (12*$gridwidth)-(2*$gridmargin); }
 
+// Push this cell to the right
 @mixin push1 { @include pushpull; left: $gridwidth; }
 @mixin push2 { @include pushpull; left: 2*$gridwidth; }
 @mixin push3 { @include pushpull; left: 3*$gridwidth; }
@@ -51,6 +63,7 @@ $gridmargin: 10px;
 @mixin push10 { @include pushpull; left: 10*$gridwidth; }
 @mixin push11 { @include pushpull; left: 11*$gridwidth; }
 
+// Pull this cell to the left
 @mixin pull1 { @include pushpull; left: -$gridwidth; }
 @mixin pull2 { @include pushpull; left: -2*$gridwidth; }
 @mixin pull3 { @include pushpull; left: -3*$gridwidth; }
@@ -63,6 +76,7 @@ $gridmargin: 10px;
 @mixin pull10 { @include pushpull; left: -10*$gridwidth; }
 @mixin pull11 { @include pushpull; left: -11*$gridwidth; }
 
+// Apply padding to the left of the cell.
 @mixin p1 { padding-left: $gridwidth; }
 @mixin p2 { padding-left: 2*$gridwidth; }
 @mixin p3 { padding-left: 3*$gridwidth; }
@@ -75,6 +89,7 @@ $gridmargin: 10px;
 @mixin p10 { padding-left: 10*$gridwidth; }
 @mixin p11 { padding-left: 11*$gridwidth; }
 
+// Apply padding to the right of the cell. 
 @mixin s1 { padding-right: $gridwidth; }
 @mixin s2 { padding-right: 2*$gridwidth; }
 @mixin s3 { padding-right: 3*$gridwidth; }
@@ -87,7 +102,7 @@ $gridmargin: 10px;
 @mixin s10 { padding-right: 10*$gridwidth; }
 @mixin s11 { padding-right: 11*$gridwidth; }
 
-// clearfix from HTML5 Boilerplate
+// This is the clearfix from HTML5 Boilerplate
 @mixin clearfix {
     zoom: 1;
 
