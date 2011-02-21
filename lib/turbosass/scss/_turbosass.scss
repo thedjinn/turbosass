@@ -1,3 +1,9 @@
+// This is the TurboSass main import file. You should import this file
+// in your main stylesheet. 
+//
+// Alternatively you can import one of the indivitual modules, but note
+// that some of these modules depend on `utils.scss`. 
+
 @import "turbosass/reset";
 @import "turbosass/grid";
 @import "turbosass/utils";
