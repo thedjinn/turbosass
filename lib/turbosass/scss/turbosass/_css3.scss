@@ -1,4 +1,7 @@
-// border-radius wrappers
+// ## CSS3 wrappers
+//
+// This file contains useufl CSS3 wrappers that prevent you from having
+// to deal with all those vendor prefixes.
 
 // Apply a border radius on all corners
 @mixin border-radius($radius) {
