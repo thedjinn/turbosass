@@ -38,6 +38,12 @@ You can find the SCSS files that are used by TurboSass in the `lib/turbosass/scs
 
 You can also compile an SCSS file with TurboSass from the command line. For this you can use the `turbosass` binary. This is a wrapper around the original Sass command line tool, but it ensures that the TurboSass files are in the include path. This saves you the hassle of typing in the exact path every time.
 
+# Documentation
+
+All the SCSS mixins are documented with comments. To get an overview of these comments in HTML format you can execute `rake rocco` in the gem directory. This generates a `doc` directory with annotated source files.
+
+Do note that in order to do this you need the Git version (or any version after 1.5) of Rocco because version 1.5 and below have unicode bugs which cause documentation to fail on files having the `@font-face` smiley trick.
+
 # License
 
 Copyright (c) 2010-2011 Emil Loer <http://emilloer.com>
