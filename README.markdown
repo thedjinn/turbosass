@@ -8,7 +8,7 @@ The mixins are divided in the following categories:
 
 * A grid system loosely based on 960.gs but using a configurable gutter width, amount of columns and column width.
 
-* A web font wrapper.
+* A web font wrapper using the bulletproof font syntax.
 
 * The HTML5 Boilerplate reset CSS.
 
@@ -24,11 +24,21 @@ and then you're ready to go.
 
 # Usage
 
+## Rails 3
+
+To use TurboSass in Rails 3 all you have to do is add the following line to your Gemfile:
+
+    gem 'turbosass', '>= 0.2.0'
+
+To make TurboSass work correctly you have to comment out the `haml` gem in your Gemfile. TurboSass automatically loads it for you.
+
+If you want to make use of other gems that utilize either Haml or Sass (such as `haml-rails`) you have to add these gems after the TurboSass gem definition.
+
 ## Sinatra
 
 TurboSass was built mainly for use in Sinatra applications, so using it here is really simple.
 
-All you have to do is `require "turbosass"` in either your `config.ru` file or your main application file. Then you can use `@import "turbosass";` in any SCSS file where you want to use TurboSass. 
+All you have to do is `require "turbosass"` in either your `config.ru` file or your main application file. Then you can use `@import "turbosass";` in any SCSS file where you want to use TurboSass.
 
 See the `examples/sinatra` directory for a fully working example.
 
